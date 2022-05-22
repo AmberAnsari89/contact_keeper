@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1navi0gn-rn+pe+yk-xjd-1h6eq2wao6x%^znjpt&p!2l58ru-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['contacts-ansari.hwrokuapp.com']
 
 
 # Application definition
@@ -129,3 +129,6 @@ LOGIN_URL='login'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import django_heroku
+django_heroku.settings(locals())
