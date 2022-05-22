@@ -1,0 +1,37 @@
+    {% extends "base.html" %}
+
+    {% block content %}
+    <table id="table_id" class="display" style="width:85%">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Contact-Type</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for contact in contacts.all %}
+        <tr class="col-20">
+            <td>{{contact.id}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.address}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.contact_type}}</td>
+            <td><a href="{% url 'edit' contact.id %}"class="btn btn-primary">Edit</a></td>
+            <td><a href="{% url 'delete' contact.id %}" class="btn btn-danger">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<script>
+  $(document).ready(function() {
+    $('#table_id').DataTable();
+} );
+ </script>
+    {% endblock %}
