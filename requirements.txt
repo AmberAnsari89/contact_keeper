@@ -13,3 +13,4 @@ tzdata==2022.1
 virtualenv==20.4.7
 virtualenvwrapper-win==1.2.6
 whitenoise==6.1.0
+django_crispy_forms==1.14.0
