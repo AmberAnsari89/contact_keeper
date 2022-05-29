@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     #own Apps
     'contacts.apps.ContactsConfig',
     'user.apps.UserConfig',
-    'crispy_forms',
+    'django_crispy_forms',
 ]
 
 MIDDLEWARE = [
